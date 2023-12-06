@@ -1,0 +1,56 @@
+.parent-grid-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .products-grid-container {
+    display: flex;
+    /* justify-content: end; */
+    flex-wrap: wrap;
+    width:100%;
+  }
+  
+  .product-card {
+    width: 30%;
+    margin: 1rem;
+  }
+  
+  
+  .filters-btn {
+    font-size: 8px;
+  }
+  
+  
+  .sorry-msg {
+    text-align: center;
+  }
+  
+  /* Responsive filters values size */
+  @media (min-width: 450px) {
+    .filters-btn {
+      font-size: 15px;
+    }
+  }
+  
+  
+  
+  /* Responsive design for products grid container */
+  @media (max-width: 1000px) {
+    .products-grid-container {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .product-card {
+      width: 40%;
+    }
+    
+  }
+  
+  @media (max-width: 400px) {
+    .product-card {
+      width: 100%;
+    }
+  }
+  

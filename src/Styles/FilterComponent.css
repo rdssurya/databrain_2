@@ -1,0 +1,25 @@
+.filter-component {
+    padding: 1rem 0rem 1rem 0rem;
+  }
+  .filter-heading {
+    font-size: 20px;
+    font-style: oblique;
+    color: blueviolet;
+  }
+  .filter-values {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 425px) {
+    .filter-heading {
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .filter-values {
+      font-size: 10px;
+    }
+  }
+
+  .filters-div{
+    width: 100%;
+  }

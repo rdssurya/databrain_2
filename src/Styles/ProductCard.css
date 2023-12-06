@@ -1,0 +1,21 @@
+.productCard-image {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 1rem;
+  }
+  .overflow-container {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: bold;
+  }
+  .add-to-cart {
+    display: flex;
+    justify-content: center;
+  }
