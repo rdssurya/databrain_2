@@ -13,14 +13,7 @@ export default function Filters(props) {
       ...JSON.parse(localStorage.getItem("allProducts")),
     ];
 
-    /**
-     * Defintion of Unique filters array
-     * Function which is called when component mounts
-     * @param {Array.<Product>} arrayOfAvailableProducts
-     * Returns us the unique filters array with each element in the format [ filterKey, [filterValues]]
-     * Ex: Output: [["Gender",["Male","Female"]],["Color",["Red","Black"]]]
-     * Filter Values will have no duplicate values
-     */
+    
     const arrayOfUniqueFilterKeysAndValues = (arrayOfAvailableProducts) => {
       const uniqueBrands = [
         "Brand",
@@ -37,15 +30,7 @@ export default function Filters(props) {
     arrayOfUniqueFilterKeysAndValues(availableProducts);
   }, []);
 
-  /**
-   * Extracts unique values from a list of products based on a specified filter key
-   *
-   * @param {Array.<Product>} productsList
-   * @param {string} filterKey
-   * @returns {Array} - Array of unique filter values
-   * Returns all the unique filter values possible based on the given products list and filter key
-   * Ex: Output: ["Male","Female"]
-   */
+  
   const getUniqueFilterValues = (productsList, filterKey) => {
     const filterValuesWithDuplicates = productsList.map(
       (product) => product[filterKey]
