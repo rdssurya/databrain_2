@@ -38,13 +38,7 @@ export default function Products() {
     }
   };
 
-  /**
-   * Function which is called in useEffect Hook
-   * If there are cartItems in localStorage that means we need to retain cartItems data for the user across pages
-   * This function sets the required keys to empty arrays on local storage only when there are no cartItems in local storage
-   * We store data in these arrays so as to use the corresponding data across our pages
-   * Also we initialise appliedFilters to the required data structure
-   */
+  
   const initializeKeysInLocalStorage = () => {
       const keysOfLocalStorage = [
         "allProducts",
@@ -62,13 +56,6 @@ export default function Products() {
   };
 
 
-  /**
-   * Function which is called on clicking Apply/Clear Filters
-   * If previously the filters are closed(not displayed) i.e. button is closed before clicking event
-   * Then first all the filters are set to empty arrays in local storage so as to allow user to apply filters afresh.
-   * If previously the filters are open (displayed) i.e. button is open before clicking event
-   * All the products will be shown on the screen by updating products array once we click the filters button (closing the filters)
-   */
   const handleFiltersClick = () => {
     if (filtersButtonIsClosed) {
       localStorage.setItem(
@@ -102,15 +89,8 @@ export default function Products() {
       setProducts([...arr.reverse()]);
     }
   }
-  /**
-   * Updates the products list according to the applied filters
-   * Function which is called when there is a change in applied filters
-   *
-   * @param { Array.<Product> } filteredProducts - Array of filtered products
-   *      Array of objects with complete data on all products according to filters
-   * This function is PASSED AS PROPS TO FILTERS component which is used whenever there is change of filters
-   * Updates the products array so as to display the filtered products
-   */
+
+  
   const filteredProductsListUpdater = (filteredProducts) => {
     setProducts(filteredProducts);
   };
